@@ -1,7 +1,7 @@
 namespace Commander.Controllers
 {
     [Microsoft.AspNetCore.Mvc.ApiController]
-    [Microsoft.AspNetCore.Mvc.Route(template: "api/[controller]")]
+    [Microsoft.AspNetCore.Mvc.Route(template: "[controller]")]
     public class CommandsController : Microsoft.AspNetCore.Mvc.ControllerBase
     {
         public CommandsController(Data.ICommandRepository repository) : base()
@@ -11,15 +11,17 @@ namespace Commander.Controllers
         private readonly Data.ICommandRepository  _repository; 
 
         [Microsoft.AspNetCore.Mvc.HttpGet]
-        public Microsoft.AspNetCore.Mvc.ActionResult<System.Collections.Generic.IEnumerable<Models.Command>> GetAll()
+        public async System.Threading.Tasks.Task<Microsoft.AspNetCore.Mvc.ActionResult<System.Collections.Generic.IEnumerable<Models.Command>>> GetAllAsync()
         {
-            var result = _repository.GetAll();
+            var result =
+                await _repository.GetAllAsync();
             return Ok(result);
         }
         [Microsoft.AspNetCore.Mvc.HttpGet(template: "{id}")]
-        public Microsoft.AspNetCore.Mvc.ActionResult<Models.Command> GetById(int id)
+        public async System.Threading.Tasks.Task<Microsoft.AspNetCore.Mvc.ActionResult<Models.Command>> GetByIdAsync(int id)
         {
-            Models.Command result = _repository.GetById(id);
+            Models.Command result = 
+                await _repository.GetByIdAsync(id);
             return Ok(result);
         }
 

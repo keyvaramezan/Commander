@@ -40,16 +40,29 @@ namespace Commander.Data
                         return _commands;
                     }
             }
-        public Models.Command GetById(int Id)
+        public async System.Threading.Tasks.Task<Models.Command> GetByIdAsync(int Id)
         {
-                Models.Command foundedCommand = 
+            Models.Command foundedCommand = null;
+            await System.Threading.Tasks.Task.Run(() => 
+            {
+                foundedCommand = 
                     Commands.Where(current => current.Id == Id)
                     .FirstOrDefault();
+            });
+                
                 return foundedCommand;
         }
-        public IEnumerable<Command> GetAll()
+        public async System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<Command>> GetAllAsync()
         {
-            return Commands;
+            System.Collections.Generic.IEnumerable<Models.Command> result = null;
+
+            await System.Threading.Tasks.Task.Run(() =>
+            {
+                result = Commands;
+            });
+        
+
+            return result ;
         }
 
         
