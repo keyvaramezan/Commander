@@ -1,26 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\sourcecodes\\learningwebapicore\\test110\\commander\\Commander.csproj": {}
+    "D:\\DotnetTemp\\LearningWebApiCore\\Commander\\Commander.csproj": {}
   },
   "projects": {
-    "E:\\sourcecodes\\learningwebapicore\\test110\\commander\\Commander.csproj": {
+    "D:\\DotnetTemp\\LearningWebApiCore\\Commander\\Commander.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\sourcecodes\\learningwebapicore\\test110\\commander\\Commander.csproj",
+        "projectUniqueName": "D:\\DotnetTemp\\LearningWebApiCore\\Commander\\Commander.csproj",
         "projectName": "Commander",
-        "projectPath": "E:\\sourcecodes\\learningwebapicore\\test110\\commander\\Commander.csproj",
-        "packagesPath": "C:\\Users\\k1\\.nuget\\packages\\",
-        "outputPath": "E:\\sourcecodes\\learningwebapicore\\test110\\commander\\obj\\",
+        "projectPath": "D:\\DotnetTemp\\LearningWebApiCore\\Commander\\Commander.csproj",
+        "packagesPath": "C:\\Users\\IT-soft\\.nuget\\packages\\",
+        "outputPath": "D:\\DotnetTemp\\LearningWebApiCore\\Commander\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\k1\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\IT-soft\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -44,6 +38,20 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameWorkCore": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "Microsoft.EntityFrameWorkCore.design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "Microsoft.EntityFrameWorkCore.sqlserver": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
